@@ -1,21 +1,14 @@
 from django.contrib import admin
-from django.urls import path
-
-# Importing App views
-from AppBlog import views as AppBlog_views
+from django.urls import path, include
 
 urlpatterns = [
     path(
-        'admin/', 
-        admin.site.urls
+        route = 'admin/', 
+        view = admin.site.urls
     ),
+
     path(
-        "blog/",
-        AppBlog_views.blog_home,
-        name="blog-home"
+        route = "",
+        view = include("AppBlog.urls")
     ),
-    path(
-        "",
-        AppBlog_views.blog_home,
-    )
 ]
