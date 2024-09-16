@@ -1,5 +1,5 @@
 venv/
-./db.sqlite2
+project_blog/db.sqlite3
 .env
 .DS_Store
 __pycache__
