@@ -1,161 +1,57 @@
-/* base.css */
-
-.navbar-nav .nav-item {
-    margin-right: 20px; /* Adjust the space between nav items */
-}
-
-.navbar-nav .nav-item:last-child {
-    margin-right: 0; /* No margin on the last item */
-}
-
-.navbar-nav .nav-link {
-    color: #cbd5db; /* Matches your custom link color */
-    position: relative; /* For the underline positioning */
-    padding-bottom: 5px; /* To create space for the underline */
-}
-
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff; /* White underline */
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.navbar-nav .nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.navbar-nav .nav-link.active::after {
-    transform: scaleX(1); /* Keep underline on active link */
-    transform-origin: bottom left;
-}
-
-
-/* General Body Styles */
 body {
-  background: #000000;
-  color: #cbd5db; /* Lighter gray text */
-  margin-top: 5rem;
+    background: rgb(122, 116, 116);
+    color: #cbd5db;
+    margin-top: 5rem;
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+    margin-top: 110px;
+    padding-bottom: 1000px;
 }
 
-/* Navbar Styles */
-
-.navbar {
-/*  padding: 0.5rem 1rem;*/
-  background-color: #000000; /* Full black background */
-}
-
-.navbar-nav .nav-link.active {
-  font-weight: 700;
-  text-decoration: underline;
-}
-.btn-outline-light {
-  color: #ffffff;
-  border-color: #555555; /* Darker border for contrast */
-}
-
-.btn-outline-light:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.navbar-brand img {
-  height: 40px; /* Adjust logo size */
-}
-
-.navbar-nav .nav-link {
-  color: #cbd5db; /* Matches your custom link color */
-}
-
-.navbar-nav .nav-link:hover {
-  color: #ffffff; /* Hover color */
-}
-
-.navbar-nav .nav-link.active {
-  font-weight: 500;
-}
-
-.form-control {
-  border-radius: 0; /* Remove rounded corners for search input */
-}
-
-.btn-outline-light {
-  color: #ffffff; /* Ensure button text is visible */
-  border-color: #ffffff; /* Button border color */
-}
-
-.btn-outline-light:hover {
-  background-color: #ffffff; /* Button background color on hover */
-  color: #000000; /* Button text color on hover */
-}
-
-/* Other existing styles */
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+    color: #444;
 }
 
-ul {
-  margin: 0;
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    /* white-space: nowrap;
+    overflow: hidden;     
+    text-overflow: ellipsis; */
 }
 
-.content-section {
-  background: #ffffff;
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
 }
 
-.article-title {
-  color: #444444;
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
 }
 
-a.article-title:hover {
-  color: #428bca;
-  text-decoration: none;
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
 }
 
-.article-content {
-  white-space: pre-line;
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
 
-.article-img {
-  height: 65px;
-  width: 65px;
-  margin-right: 16px;
-}
-
-.article-metadata {
-  padding-bottom: 1px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3;
-}
-
-.article-metadata a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-.article-svg {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-}
-
-.account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
-}
-
-.account-heading {
-  font-size: 2.5rem;
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }
