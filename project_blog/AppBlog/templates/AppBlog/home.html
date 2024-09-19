@@ -2,19 +2,23 @@
 
 {% block content %}
 
-	<div class="box">
-        <div class="profile-photo">
-            <img src="https://via.placeholder.com/100" alt="Profile Photo">
-        </div>
-        <div class="content">
-            <div class="author-date">
-                <div class="author-name">Author Name</div>
-                <div class="publish-date">Date of Publish</div>
-            </div>
-            <div class="content-text">
-                <p>Contents!</p>
-            </div>
-        </div>
-    </div>
+	{% for post in posts %}
+
+		<div class="box">
+	        <div class="profile-photo">
+	            <img src="https://via.placeholder.com/100" alt="Profile Photo">
+	        </div>
+	        <div class="content">
+	            <div class="author-date">
+	                <div class="author-name">{{ post.author }}</div>
+	                <div class="publish-date">{{ post.date_posted|date:"F d, Y" }}</div>
+	            </div>
+	            <div class="content-text">
+	                <p>{{ post.content }}</p>
+	            </div>
+	        </div>
+	    </div>
+
+    {% endfor %}
 
 {% endblock content %}
