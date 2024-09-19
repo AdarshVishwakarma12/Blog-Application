@@ -1,0 +1,62 @@
+.box {
+
+	display: flex;
+	flex: 1 1 calc(33.333% - 30px);
+
+    box-sizing: border-box;
+
+    background-color: #928f8f;
+
+    border: 1px solid #ffffff;      
+    border-radius: 5px; 
+
+    padding: 20px;
+
+    min-width: 280px;
+	
+	margin-bottom: 4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 calc(50% - 30px); /* Two boxes per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 100%;              /* One box per row on very small screens */
+    }
+}
+
+/* Profile photo section */
+.profile-photo {
+
+    flex: 0 0 100px;  
+    margin-right: 15px;
+}
+
+/* Profile photo styles */
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;          /* Round profile photo */
+}
+
+/* Content section */
+.content {
+    flex: 1;
+}
+
+/* Author and date section */
+.author-date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Content section styles */
+.content-text {
+    margin-top: 10px;
+}
