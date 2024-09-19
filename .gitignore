@@ -1,0 +1,6 @@
+venv/
+project_blog/db.sqlite3
+.env
+.DS_Store
+__pycache__
+.git
